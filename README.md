@@ -25,6 +25,7 @@ Par défaut, SHA256 est utilisé si l’algorithme n’est pas spécifié ou inc
 
 
 ## Architecture du projet
+```shell
 src/
 ├─ t3c.h           # Définitions globales, structures et prototypes
 ├─ main.c          # Gestion des arguments et modes
@@ -33,6 +34,7 @@ src/
 ├─ mode_lookup.c   # Mode L : chargement, tri, recherche rapide
 Makefile
 README.md
+```
 
 
 ```mermaid
