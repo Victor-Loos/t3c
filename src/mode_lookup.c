@@ -25,9 +25,9 @@ static Table *load_table(const char *table_file) {
         line[strcspn(line, "\r\n")] = 0;
         if (line[0] == '\0') continue;
 
-        // trouver le séparateur : tab prioritaire, sinon premier espace
-        char *sep = strchr(line, '\t');
-        if (!sep) sep = strchr(line, ' ');
+        // trouver le séparateur : tab prioritaire, sinon dernier espace
+        char *sep = strrchr(line, '\t');
+        if (!sep) sep = strrchr(line, ' ');
         if (!sep) continue; // format inattendu -> ignorer
 
         *sep = '\0';
